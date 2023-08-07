@@ -111,8 +111,8 @@ export class MysqlService extends DatabaseService {
   }
 
   /** Returns the schema name of the current connection. */
-  getDatabaseName() {
-    return this.params.get(DB_NAME);
+  override getDatabaseName() {
+    return this.params.get(DB_NAME) as string;
   }
 }
 
